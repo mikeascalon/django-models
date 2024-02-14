@@ -1,0 +1,35 @@
+{% load compress %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% compress css %}
+        <link rel="stylesheet" href="{% static 'src/output.css' %}">
+    {% endcompress %}
+
+</head>
+<body>
+    <header class="bg-blue-400 px-4 py-8 align-middle">
+        <header class="bg-blue-400 px-4 py-8">
+            <nav class="flex items-center">
+                <h1 class="text-4xl mr-4">Snacks</h1>
+                <a href="{% url 'snack_list' %}" class="mr-4">snack list</a>
+                
+            </nav>
+        </header>
+        
+
+    </header>
+    <main>
+        {% block content %}
+
+        {% endblock content %}
+    </main>
+    
+</body>
+</html>

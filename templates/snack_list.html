@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="text-3xl" p-4> Snack lists </h2>
+
+    <ul class="p-4">
+        {% for snack in snacks %}
+        <ul>
+            <a href="{% url 'snack_detail' snack.pk %}" class="text-2xl hover:text-red-400">{{ snack.name }}</a>
+            <p>Purchaser:{{snack.purchaser}}</p>
+            <p>Description:{{snack.description}}</p>
+        </ul>
+
+        {% endfor %}
+
+        {% endblock content %}
+
+    </ul>

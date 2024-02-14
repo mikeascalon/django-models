@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2 class="text-xl font-bold p-4"> Detail snack </h2>
+
+
+
+        <div class="p-4 "> <!-- Margin top for spacing -->
+            <p class="text-lg font-bold"> <!-- Text size bigger than surrounding text and bold -->
+                {{ snack.name }}
+            </p>
+            <p class="text-sm"> <!-- Text size smaller than surrounding text -->
+                Purchaser: {{ snack.purchaser }}
+            </p>
+            <p class="text-sm"> <!-- Text size smaller than surrounding text -->
+                Description: {{ snack.description }}
+            </p>
+        </div>
+
+
+
+    {% endblock content %}
+
+</ul>
